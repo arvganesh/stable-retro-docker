@@ -34,4 +34,4 @@ To get GUIs from containerized applications to display on your Mac, follow the s
 
 In summary, you need to install [XQuartz](https://github.com/XQuartz/) and configure a few things.
 
-Since [gymnasium](https://gymnasium.farama.org/) needs to use (indirect) GLX from within the container to display GUIs, I had to run this command in my terminal on OS X: `defaults write org.xquartz.X11 enable_iglx -bool true` to get things to finally work. If the steps don't work, restart XQuartz and / or your Mac before trying again.
+Since [gymnasium](https://gymnasium.farama.org/) needs to use (indirect) GLX from within the container to display GUIs, I had to run this command on my Mac terminal `defaults write org.xquartz.X11 enable_iglx -bool true` to get things to finally work. If the steps don't work, restart XQuartz and / or your Mac before trying again.
