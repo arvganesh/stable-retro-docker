@@ -21,7 +21,7 @@ docker run --detach
 #### Notes:
 I had to add the argument `--platform linux/amd64` so the container would work on M1. See [this](https://stackoverflow.com/questions/65612411/forcing-docker-to-use-linux-amd64-platform-by-default-on-macos) for more details.
 
-I also had to add the argument: `--env DISPLAY=host.docker.internal:0` to get display support on macOS (see the display support section).
+I also had to add the argument `--env DISPLAY=host.docker.internal:0` to get display support on macOS (see the display support section).
 
 For this argument: `--volume $(pwd):/code`, `/code` is specified in the Dockerfile as the `WORKDIR`. This argument will mount the current working directory to `/code` in the Docker container. Change `$(pwd)` to another path to modify this behavior.
 
