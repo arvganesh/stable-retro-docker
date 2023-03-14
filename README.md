@@ -23,7 +23,7 @@ I had to add the argument `--platform linux/amd64` so the container would work o
 I also had to add the argument: `--env DISPLAY=host.docker.internal:0` to get display support with OS X as the host.
 
 ### Execution
-`docker exec -it display-test-cont bash`
+`docker exec -it {Your Container Name} bash`
 
 ## Display Support (from within the container) for Mac Users
 
