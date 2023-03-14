@@ -15,7 +15,7 @@ docker run --detach
            --rm 
            --volume $(pwd):/code
            --platform linux/amd64 
-           --name {Your Contained Name} 
+           --name {Your Container Name} 
 ```
 
 I had to add the argument `--platform linux/amd64` so the container would work on M1. See [this](https://stackoverflow.com/questions/65612411/forcing-docker-to-use-linux-amd64-platform-by-default-on-macos) for more details.
