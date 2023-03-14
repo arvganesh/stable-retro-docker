@@ -18,18 +18,17 @@ docker run --detach
            --name {Your Container Name} 
 ```
 
-Notes:
-
+#### Notes:
 I had to add the argument `--platform linux/amd64` so the container would work on M1. See [this](https://stackoverflow.com/questions/65612411/forcing-docker-to-use-linux-amd64-platform-by-default-on-macos) for more details.
 
-I also had to add the argument: `--env DISPLAY=host.docker.internal:0` to get display support with OS X as the host.
+I also had to add the argument: `--env DISPLAY=host.docker.internal:0` to get display support on macOS (see the display support section).
 
 For this argument: `--volume $(pwd):/code`, `/code` is specified in the Dockerfile as the `WORKDIR`. This argument will mount the current working directory to `/code` in the Docker container. Change `$(pwd)` to another path to modify this behavior.
 
 ### Execution
 `docker exec -it {Your Container Name} bash`
 
-## Display Support (from within the container) for Mac Users
+## Display Support (from within the container) on macOS
 
 To get GUIs from containerized applications to display on your Mac, follow the steps in this guide: https://gist.github.com/paul-krohn/e45f96181b1cf5e536325d1bdee6c949. 
 
