@@ -1,6 +1,6 @@
 # stable-retro-docker
 
-Installs [stable-retro](https://github.com/MatPoliquin/stable-retro), a fork of OpenAI retro. I had a lot of problems getting this to work on my M1 Macbook Pro (running OS X 12.5), so hopefully this Dockerfile is useful.
+Dockerfile for an image with [stable-retro](https://github.com/MatPoliquin/stable-retro), a fork of OpenAI retro. I had a lot of problems getting this to work on my M1 Macbook Pro (running OS X 12.5), so hopefully this Dockerfile is useful.
 
 ## Usage
 
