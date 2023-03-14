@@ -9,13 +9,14 @@ Dockerfile for an Ubuntu 22.04 image with [stable-retro](https://github.com/MatP
 
 ### Running
 ```
-docker run --detach 
-           --env DISPLAY=host.docker.internal:0 
-           --interactive {Your Image Name}
-           --rm 
-           --volume $(pwd):/code
-           --platform linux/amd64 
-           --name {Your Container Name} 
+docker run --detach \
+           --env DISPLAY=host.docker.internal:0 \
+           --interactive \
+           --rm \
+           --volume $(pwd):/code \
+           --platform linux/amd64 \
+           --name {Your Container Name} \
+           {Your Image Name)
 ```
 
 #### Notes:
