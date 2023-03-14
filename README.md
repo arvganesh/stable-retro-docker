@@ -16,10 +16,12 @@ docker run --detach \
            --volume $(pwd):/code \
            --platform linux/amd64 \
            --name {Your Container Name} \
-           {Your Image Name)
+           {Your Image Name}
 ```
 
 #### Notes:
+Don't use `{}` when specifying image / container names.
+
 I had to add the argument `--platform linux/amd64` so the container would work on M1. See [this](https://stackoverflow.com/questions/65612411/forcing-docker-to-use-linux-amd64-platform-by-default-on-macos) for more details.
 
 I also had to add the argument `--env DISPLAY=host.docker.internal:0` to get display support on macOS (see the display support section).
