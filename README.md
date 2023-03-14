@@ -5,7 +5,7 @@ Dockerfile for an Ubuntu 22.04 image with [stable-retro](https://github.com/MatP
 ## Usage
 
 ### Building
-`docker build -t {Your Image Name} -f Dockerfile .`
+`docker build -t Your-Image-Name -f Dockerfile .`
 
 ### Running
 ```
