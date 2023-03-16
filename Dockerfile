@@ -39,9 +39,15 @@ RUN wget https://repo.anaconda.com/miniconda/Miniconda3-py38_23.1.0-1-Linux-x86_
 
 ENV PATH /opt/conda/bin:$PATH
 
-# install stable-retro, jax
+# Create development environment
+RUN conda config --add channels conda-forge
+RUN conda config --set channel_priority strict
+RUN conda create --name dev python=3.8
+RUN conda activate dev
+
+# Install stable-retro, tianshou
 RUN pip3 install --no-cache-dir git+https://github.com/MatPoliquin/stable-retro.git
-RUN conda install -c conda-forge jax
+RUN conda install tianshou
 
 # Setup Filesystem.
 ENV SHELL=/bin/bash
